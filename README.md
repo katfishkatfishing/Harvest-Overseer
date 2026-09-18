@@ -19,3 +19,6 @@ The custom PCB was designed to handle low-power battery operation and reliable S
 + <ins>**The BRAIN**</ins>🧠 **ESP32-S3-WROOM-1-N16R8** to handle calculations, sensor input processing, and screen rendering.
 + <ins>**The FACE**</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a **7-Pin SPI lcd** (SDO, LED, SCK, SDI, DC/RS, RESET, CS)
 + <ins>**The HEART**</ins>🫀 An  integrated footprint of **TP4056充电源模块板** or **TP4056 charging power module board** for battery replenishment, and a **TPS7133Q** (a low dropout voltage regulator) that converts 4.2V to 3.3V for a clean and stable voltage rail for the ESP32 and other sensitive logic pins.
+
+## Melvinspart(Node)
+I think this one is the sensors and other stuff, gotta wait for the big M to finally wake up from his slumber so I can get more info of this.
