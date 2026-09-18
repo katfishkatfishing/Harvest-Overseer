@@ -14,7 +14,7 @@ A stationary, comprehensive agricultural monitor that measures soil pH, moisture
 👁️**One-Glance Display:** Instant visual updates through a 7-pin SPI lcd.\  
 🔋**Battery Powered:** Fully portable design powered by a rechargeable Li-ion battery with integrated power management.  
 
-## 🍰 PCB & Hardware Architecture 
+## 🍰 PCB & Hardware Architecture 🥯
 The custom PCB was designed to handle low-power battery operation and reliable SPI sensor communication in a compact form factor.
 + <ins>**The BRAIN**</ins>🧠 **ESP32-S3-WROOM-1-N16R8** to handle calculations, sensor input processing, and screen rendering.
 + <ins>**The FACE**</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a **7-Pin SPI lcd** (SDO, LED, SCK, SDI, DC/RS, RESET, CS)
