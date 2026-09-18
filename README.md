@@ -16,7 +16,7 @@ A stationary, comprehensive agricultural monitor that measures soil pH, moisture
 
 ## 🍰PCB & Hardware Architecture🥯
 The custom PCB was designed to handle low-power battery operation and reliable SPI sensor communication in a compact form factor.\
-+<ins>**The BRAIN**</ins> ESP32-S3-WROOM-1-N16R8\
-+<ins>**The FACE**</ins> 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a 7-Pin SPI OLED Display (SDO,LED,SCK,SDI,DC/RS,RESET,CS)\
-+<ins>**The HEART**</ins> TP4056充电源模块板 or TP4056 charging power module board\
++ <ins>**The BRAIN**</ins> ESP32-S3-WROOM-1-N16R8\
++ <ins>**The FACE**</ins> 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a 7-Pin SPI OLED Display (SDO,LED,SCK,SDI,DC/RS,RESET,CS)\
++ <ins>**The HEART**</ins> TP4056充电源模块板 or TP4056 charging power module board\
 
