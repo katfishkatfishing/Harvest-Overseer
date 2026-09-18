@@ -1,5 +1,5 @@
 # Harvest-Overseer 🌱
->Built for third space Hack Club! - Week 1️⃣
+>Built for third space Hack Club! - Week 1️⃣  
 _It all started when two unemployed dudes stumbled upon a third, equally unemployed dude. Unburdened by 9-to-5s and fuelled by sheer ambition, the trio set off to blaze new trails, conquering land, sea, and hardware. Day and night they grind towards their goal — will they pull it off? Only fate can tell._
 
 A stationary, comprehensive agricultural monitor that measures soil pH, moisture levels, nutrient concentrations (NPK), and light intensity. It displays the data of the plant and soil's health on an OLED screen to let you easily know what your plant needs.
