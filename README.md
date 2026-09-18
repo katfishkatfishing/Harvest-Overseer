@@ -10,7 +10,7 @@ A stationary, comprehensive agricultural monitor that measures soil pH, moisture
 **Soil pH & Nutrients Tracking:** Monitors pH balance and NPK (_Nitrogen, Phosphorus, Potassium_) concentrations.\
 **Moisture Detection:** Measures active soil hydration levels to prevent over or under-watering.\
 **Light Intensity:** Tracks daily ambient light exposures to ensure optimal photosynthesis conditions.\
-**One-Glance Display:** Instand visual updates through a _SPI OLED screen_.\
+**One-Glance Display:** Instand visual updates through a _7 pin spi lcd_.\
 **Battery Powered:** Fully portable design pwoered by a rechargeable Li-ion battery with integrated power management.
 
 ## PCB & Hardware Architecture
