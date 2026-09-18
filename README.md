@@ -1,11 +1,11 @@
 # Harvest-Overseer 🌱
 >Built for third space Hack Club! - Week 1️⃣
-_It all started when two unemployed dudes stumbled upon a third, equally unemployed dude. Unburdened by 9-to-5s and fuelled by sheer ambition, the trio set off to blaze new trails, conquering land, sea, and hardware. Day and night they grind towards their goal ——— will they pull it off? Only fate can tell._
+_It all started when two unemployed dudes stumbled upon a third, equally unemployed dude. Unburdened by 9-to-5s and fuelled by sheer ambition, the trio set off to blaze new trails, conquering land, sea, and hardware. Day and night they grind towards their goal — will they pull it off? Only fate can tell._
 
 A stationary, comprehensive agricultural monitor that measures soil pH, moisture levels, nutrient concentrations (NPK), and light intensity. It displays the data of the plant and soil's health on an OLED screen to let you easily know what your plant needs.
 
 ## 💠 Project Overview 💠
-**Harvest-Overseer** is an all-in-one agricultural monitor designed to take the guesswork out of plant care. Stationed directly in your garden bed or potted plant, it will continuously track essential environmental and soil parameters ——— displaying real-time health diagnostics on an integrated OLED screen so you always know exactly what your plants need to thrive.
+**Harvest-Overseer** is an all-in-one agricultural monitor designed to take the guesswork out of plant care. Stationed directly in your garden bed or potted plant, it will continuously track essential environmental and soil parameters — displaying real-time health diagnostics on an integrated OLED screen so you always know exactly what your plants need to thrive.
 
 ### Key Freatures 🗝️
 🥖**Soil pH & Nutrients Tracking:** Monitors pH balance and NPK (_Nitrogen, Phosphorus, Potassium_) concentrations.\
