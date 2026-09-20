@@ -72,11 +72,11 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 <table>
   <tr>
     <td align="center">
-       <img width="400" alt="Sensor Node PCB Trace Routing" src="Assets/SensorNode_PCBTraceRouting.png"><br>
+       <img width="400" alt="Sensor Node PCB Trace Routing" src="Assets/SensorNode_PCBTraceRoutingNew.png"><br>
       PCB Trace Routing
     </td>
     <td align="center">
-      <img width="400" alt="Sensor Node PCB Render" src="Assets/SensorNode_3DModel.png"><br>
+      <img width="400" alt="Sensor Node PCB Render" src="Assets/SensorNode_3DPCBRenderNew.png"><br>
       3D PCB Render
     </td>
   </tr>
