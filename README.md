@@ -56,3 +56,10 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 + <ins>USB-C Interface</ins>🔋 a `USB4085` GCT 16-pin USB-C receptacle for charging and power delivery.
 + <ins>Sensor Terminal Blocks</ins> `WAGO 233 Series` tool-less spring-cage terminals (2x08 and 2x04) for wiring of soil sensors (pH, NPK, moisture, light).
 + <ins>User Controls</ins>🫳 `B3U-1000P` tactile push button for manual settings, `LED_SMD_0603` status LED for charging state, `68k,10k,2k,100k,5.1k resistor smd 0603 & 470R resistor smd 0402` and `10uF capacitor smd 0402`for signal conditioning, and power rail decoupling.
+
+## Display Ui 👾
+_Plant in good helth_
+![alt text](<Assets/Plant Gif.gif>)
+
+_Plant in bad helth_
+![alt text](<Assets/Plant Unhelth.jpeg>)
