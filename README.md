@@ -22,11 +22,11 @@ The Master Unit receives sensor data, handles system logic, and drives the local
 + <ins>The FACE</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a `7-Pin SPI lcd` (_GND, VCC, CLK, MOSI, RES, DC, CS_)
 + <ins>The HEART</ins>🫀 An  integrated footprint of `TP4056充电源模块板` or `TP4056 charging power module board` for safe USB-C power delivery and Li-ion battery charging, and a `TPS7133Q` (a low dropout voltage regulator) that converts 4.2V to 3.3V for a clean and stable voltage rail for the ESP32-S3 and other sensitive logic pins.
 
-_Master Unit PCB and Schematics_\
+_Master Unit PCB and Schematics_
 <table>
   <tr>
     <td align="center">
-      <img width="600" alt="Schematic" src="Assets/Schematic.jpeg"><br>
+      <img width="400" alt="Schematic" src="Assets/Schematic.jpeg"><br>
       Schematic
     </td>
     <td align="center">
@@ -40,7 +40,7 @@ _Master Unit PCB and Schematics_\
       3D PCB Render (Top view)
     </td>
     <td align="center">
-      <img width="400" alt="PCB Trace Routing" src="Assets/PCB Trace Routing.jpeg"><br>
+      <img width="400" alt="PCB Trace Routing" src="Assets/3D PCB Render (Bottom view).jpeg"><br>
       3D PCB Render (Bottom view)
     </td>
   </tr>
@@ -62,7 +62,7 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 + <ins>User Controls</ins>🫳 `B3U-1000P` tactile push button for manual settings, `LED_SMD_0603` status LED for charging state, `68k,10k,2k,100k,5.1k resistor smd 0603 & 470R resistor smd 0402` and `10uF capacitor smd 0402`for signal conditioning, and power rail decoupling.
 
 ## Display & User Interface 👾
-Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.\
+Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.
 <table>
   <tr>
     <td align="center">
@@ -76,6 +76,32 @@ Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI94
   </tr>
 </table>
 
-Here's a photo of the PCB in the case.\
+_Here's a photo of the PCB in the case._
 <img width="400" alt="3D PCB in case" src="Assets/3D PCB model in the case.png">
 <img width="400" alt="3D PCB model" src="Assets/3D PCB model.png">
+<table>
+  <tr>
+    <td align="center">
+      <img width="400" alt="3D PCB in case" src="Assets/3D PCB model in the case.png"><br>
+      3D PCB in case
+    </td>
+    <td align="center">
+      <img width="400" alt="3D PCB model" src="Assets/3D PCB model.png"><br>
+      3D PCB model
+    </td>
+  </tr>
+</table>
+
+_Some display ui_
+<table>
+  <tr>
+    <td align="center">
+      <img width="400" alt="Plant is helth" src="Assets/Plant Gif.gif"><br>
+      Plant is good helth
+    </td>
+    <td align="center">
+      <img width="400" alt="Plant is unhelth" src="Assets/Plant Unhelth.jpeg"><br>
+      Plant is unhelth
+    </td>
+  </tr>
+</table>
