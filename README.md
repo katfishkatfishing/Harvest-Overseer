@@ -35,4 +35,4 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 #### Connectors & Peripherals 🖇️
 + <ins>**USB-C Interface**</ins> a **USB4085** GCT 16-pin USB-C receptacle is used for charging.
 + <ins>**Sensor Terminal Blocks**</ins> **WAGO 233 Series**, a tool-less spring-cage terminals (2x08 and 2x04) for easy wiring of soil sensors (pH, NPK, moisture, light)
-+ <ins>**Some random button and stuff (unsure of its usage)** `B3U-1000P` tactile switch, `0603` status LEDs, filtering capacitors, and precision SMD resistor networks.
++ <ins>**Some random button and stuff (unsure of its usage)**</ins> `B3U-1000P` tactile switch, `0603` status LEDs, filtering capacitors, and precision SMD resistor networks.
