@@ -68,6 +68,8 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
       Schematic
     </td>
   </tr>
+</table>
+<table>
   <tr>
     <td align="center">
        <img width="400" alt="Sensor Node PCB Trace Routing" src="Assets/SensorNode_PCBTraceRouting.png"><br>
@@ -114,7 +116,7 @@ _Some display ui_
   <tr>
     <td align="center">
       <img width="400" alt="Plant is helth" src="Assets/Plant Gif.gif"><br>
-      Plant is good helth
+      Plant in good helth
     </td>
     <td align="center">
       <img width="400" alt="Plant is unhelth" src="Assets/Plant Unhelth.jpeg"><br>
