@@ -26,21 +26,21 @@ _Master Unit PCB and Schematics_
 <table>
   <tr>
     <td align="center">
-      <img width="400" alt="Schematic" src="Assets/Schematic.jpeg"><br>
+      <img width="400" alt="Master Unit Schematic" src="Assets/MasterUnit_Schematic.jpeg"><br>
       Schematic
     </td>
     <td align="center">
-      <img width="400" alt="PCB Trace Routing" src="Assets/PCB Trace Routing.jpeg"><br>
+      <img width="400" alt="Master Unit PCB Trace Routing" src="Assets/MasterUnit_PCBTraceRouting.jpeg"><br>
       PCB Trace Routing
     </td>
   </tr>
   <tr>
     <td align="center">
-       <img width="400" alt="3D PCB Render (Top view)" src="Assets/3D PCB Render (Top view).jpeg"><br>
+       <img width="400" alt="Master Unit 3D PCB Render (Top view)" src="Assets/MasterUnit_3DPCBRender(Top view).jpeg"><br>
       3D PCB Render (Top view)
     </td>
     <td align="center">
-      <img width="400" alt="PCB Trace Routing" src="Assets/3D PCB Render (Bottom view).jpeg"><br>
+      <img width="400" alt="Master Unit PCB Render (Bottom view)" src="Assets/MasterUnit_3DPCBRender(Bottom view).jpeg"><br>
       3D PCB Render (Bottom view)
     </td>
   </tr>
@@ -61,6 +61,25 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 + <ins>Sensor Terminal Blocks</ins> `WAGO 233 Series` tool-less spring-cage terminals (2x08 and 2x04) for wiring of soil sensors (pH, NPK, moisture, light).
 + <ins>User Controls</ins>🫳 `B3U-1000P` tactile push button for manual settings, `LED_SMD_0603` status LED for charging state, `68k,10k,2k,100k,5.1k resistor smd 0603 & 470R resistor smd 0402` and `10uF capacitor smd 0402`for signal conditioning, and power rail decoupling.
 
+<table>
+  <tr>
+    <td align="center">
+      <img width="800" alt="Sensor Node Schematic" src="Assets/SensorNode_Schematic.png"><br>
+      Schematic
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+       <img width="400" alt="Sensor Node PCB Trace Routing" src="Assets/SensorNode_PCBTraceRouting.png"><br>
+      PCB Trace Routing
+    </td>
+    <td align="center">
+      <img width="400" alt="Sensor Node PCB Render" src="Assets/SensorNode_3DModel.png"><br>
+      3D PCB Render
+    </td>
+  </tr>
+</table>
+
 ## Display & User Interface 👾
 Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.
 <table>
@@ -76,18 +95,16 @@ Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI94
   </tr>
 </table>
 
-_Here's a photo of the PCB in the case._
-<img width="400" alt="3D PCB in case" src="Assets/3D PCB model in the case.png">
-<img width="400" alt="3D PCB model" src="Assets/3D PCB model.png">
+_Here's a photo of the Master Unit PCB in the case._
 <table>
   <tr>
     <td align="center">
-      <img width="400" alt="3D PCB in case" src="Assets/3D PCB model in the case.png"><br>
-      3D PCB in case
+      <img width="400" alt="3D PCB in case" src="Assets/MasterUnitInCase.png"><br>
+      Master Unit 3D PCB in case
     </td>
     <td align="center">
-      <img width="400" alt="3D PCB model" src="Assets/3D PCB model.png"><br>
-      3D PCB model
+      <img width="400" alt="3D PCB model" src="Assets/MasterUnitPCBModel.png"><br>
+      Master Unit 3D PCB model
     </td>
   </tr>
 </table>
