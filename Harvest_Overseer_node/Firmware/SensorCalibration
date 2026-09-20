@@ -1,0 +1,56 @@
+#include <Preferences.h>
+
+Preferences preferences;
+
+const int phPin = 3;
+
+float ph7Voltage = 2.5;
+float ph4Voltage = 3.0;
+
+void setup() {
+    Serial.begin(115200);
+    pinMode(phPin, INPUT);
+
+    preferences.begin("sensorCalibration", false);
+
+    ph7Voltage = preferences.getFloat("ph7Voltage", 2.5);
+    ph4Voltage = preferences.getFloat("ph4Voltage", 3.0);
+
+    Serial.println("Boot Complete: Loaded calibration data.");
+
+    Serial.print("Saved pH 7 Voltage: ");
+    Serial.println(ph7Voltage);
+
+    Serial.print("Saved pH 4 Voltage: ");
+    Serial.println(ph4Voltage);
+
+    Serial.println("Type '7' or '4' in the serial monitor to calibrate.");
+}
+
+void loop() {
+    if (Serial.available() > 0) {
+        char cmd = Serial.read();
+
+        if (cmd == '7') {
+            float currentVoltage = (analogRead(phPin) * 3.3) / 4095.0;
+
+            preferences.putFloat("ph7Voltage", currentVoltage);
+
+            ph7Voltage = currentVoltage;
+
+            Serial.print("Calibrated pH 7 Voltage: ");
+            Serial.println(currentVoltage);
+
+        } else if (cmd == '4') {
+
+            float currentVoltage = (analogRead(phPin) * 3.3) / 4095.0;
+
+            preferences.putFloat("ph4Voltage", currentVoltage);
+            
+            ph4Voltage = currentVoltage;
+            
+            Serial.print("Calibrated pH 4 Voltage: ");
+            Serial.println(currentVoltage);
+        }
+    }
+}
