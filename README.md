@@ -34,10 +34,10 @@ _Master Unit PCB and Schematics_
   </tr>
   <tr>
     <td>
-     <img alt="3D PCB Render (Top view)" src="Photo/3D PCB Render (Top view).jpeg" />
+     <img width="223" height="365" alt="3D PCB Render (Top view)" src="Photo/3D PCB Render (Top view).jpeg" />
     </td>
     <td>
-      <img alt="3D PCB Render (Bottom view)" src="Photo/3D PCB Render (Bottom view).jpeg" />
+      <img width="223" height="365" alt="3D PCB Render (Bottom view)" src="Photo/3D PCB Render (Bottom view).jpeg" />
     </td>
   </tr>
 </table>
