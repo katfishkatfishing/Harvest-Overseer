@@ -1,0 +1,55 @@
+#include <esp_now.h>
+#include <WiFi.h>
+
+//define shared data structure
+typedef struct sensorData {
+    float phVoltage;
+    float npkVoltage;
+    float moistureVoltage;
+    float lightIntensity;
+} sensorData;
+
+sensorData receivedData;
+
+void OnDataReceived(const uint8_t * mac, const uint8_t *incomingData, int len) {
+    memcpy(&receivedData, incomingData, sizeof(receivedData));
+    
+    Serial.print("Packet received, bytes: ");
+
+    Serial.println(len);
+
+    Serial.print("pH Voltage: ");
+    Serial.println(receivedData.phVoltage);
+    Serial.print(" V");
+
+    Serial.print("NPK Voltage: ");
+    Serial.println(receivedData.npkVoltage);
+    Serial.print(" V");
+
+    Serial.print("Moisture Voltage: ");
+    Serial.println(receivedData.moistureVoltage);
+    Serial.print(" V");
+
+    Serial.print("Light Intensity: ");
+    Serial.println(receivedData.lightIntensity);
+    Serial.print(" lux");
+
+    Serial.println("-----------------------");
+}
+
+void setup() {
+    Serial.begin(115200);
+
+    WiFi.mode(WIFI_STA);
+
+    if (esp_now_init() !=ESP_OK) {
+        Serial.println("Error: ESP-NOW initialization failed");
+        return;
+    }
+
+    esp_now_register_recv_cb(OnDataReceived);
+}
+
+void loop() {
+    // Nothing to do here, data is received in the callback function
+}

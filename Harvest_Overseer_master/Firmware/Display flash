@@ -1,0 +1,27 @@
+//libs
+#include <SPI.h>
+#include <TFT_eSPI.h>
+
+TFT_eSPI tft = TFT_eSPI();
+
+void setup() {
+
+    Serial.begin(115200);
+    Serial.println("Display flash test");
+
+    tft.init();
+
+    tft.setRotation(1);
+
+    tft.fillScreen(TFT_BLACK);
+
+    tft.setTextColor(TFT_WHITE, TFT_BLACK);
+
+    tft.setTextSize(2);
+
+    tft.drawString("Display flash test", 10, 10);
+}
+
+void loop() {
+    
+}

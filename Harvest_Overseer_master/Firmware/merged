@@ -1,0 +1,141 @@
+#include <SPI.h>
+#include <TFT_eSPI.h>
+#include <esp_now.h>
+#include <WiFi.h>
+
+//display setup
+TFT_eSPI tft = TFT_eSPI();
+
+//image arrays
+const unsigned short img_healthy[1]
+PROGMEM = {};
+
+const unsigned short img_unhealthy[1]
+PROGMEM = {};
+
+//plant states
+enum PlantState { UNKNOWN, HEALTHY, UNHEALTHY };
+PlantState currentPlantState = UNKNOWN;
+
+//esp-now data structure
+typedef struct sensorData {
+    float phVoltage;
+    float npkVoltage;
+    float moistureVoltage;
+    float lightIntensity;
+} sensorData;
+
+sensorData receivedData;
+
+//states
+bool newDataReceived = false;
+bool connectionLost = false;
+
+//timers
+unsigned long lastDataReceivedTime = 0;
+const unsigned long connectionTimeout = 10000; // 10 seconds
+
+void OnDataReceived(const uint8_t * mac, const uint8_t *incomingData, int len) {
+    memcpy(&receivedData, incomingData, sizeof(receivedData));
+    newDataReceived = true;
+    lastDataReceivedTime = millis();
+}
+
+void setup() {
+
+    tft.init();
+
+    tft.setRotation(1);
+    tft.fillScreen(TFT_BLACK);
+
+    tft.setTextColor(TFT_WHITE, TFT_BLACK);
+    tft.setTextSize(2);
+    tft.drawString("Harvest Overseer", 10, 10);
+
+    tft.setTextSize(2);
+    tft.drawString("pH Voltage:", 10, 40);
+    tft.drawString("NPK Voltage:", 10, 70);
+    tft.drawString("Moisture Voltage:", 10, 100);
+    tft.drawString("Light Intensity:", 10, 130);
+
+    WiFi.mode(WIFI_STA);
+    if (esp_now_init() != ESP_OK) {
+        tft.setTextColor(TFT_RED, TFT_BLACK);
+        tft.drawString("Error: ESP-NOW init failed", 10, 130);
+        return;
+    }
+    esp_now_register_recv_cb(OnDataReceived);
+
+    lastDataReceivedTime = millis();
+
+}
+
+
+void loop() {
+
+    if (millis() - lastDataReceivedTime > connectionTimeout) {
+        if (!connectionLost) {
+            tft.setTextColor(TFT_RED, TFT_BLACK);
+            tft.drawString("Connection Lost", 10, 160);
+            tft.drawString("---.---", 10, 40);
+            tft.drawString("---.---", 10, 70);
+            tft.drawString("---.---", 10, 100);
+            tft.drawString("---.---", 10, 130);
+
+            connectionLost = true;
+        }
+    }
+
+    if (newDataReceived) {
+
+        if (connectionLost) {
+            tft.fillRect(10, 160, 200, 20, TFT_BLACK);
+
+            connectionLost = false;
+        }
+
+        tft.setTextColor(TFT_WHITE, TFT_BLACK);
+        tft.setTextSize(2);
+        tft.drawFloat(receivedData.phVoltage, 2, 150, 40);
+        tft.drawFloat(receivedData.npkVoltage, 2, 150, 70);
+        tft.drawFloat(receivedData.moistureVoltage, 2, 150, 100);
+        tft.drawFloat(receivedData.lightIntensity, 2, 150, 130);
+
+        newDataReceived = false;
+
+        // Update plant state based on sensor data
+        PlantState newState;
+        if (receivedData.phVoltage >= 5.0 && receivedData.phVoltage <= 7.0 &&
+            receivedData.npkVoltage >= 1.0 && receivedData.npkVoltage <= 3.0 &&
+            receivedData.moistureVoltage >= 2.0 && receivedData.moistureVoltage <= 4.0 &&
+            receivedData.lightIntensity >= 200.0) {
+            newState = HEALTHY;
+        } else if (receivedData.phVoltage < 5.0 || receivedData.phVoltage > 7.0 ||
+                   receivedData.npkVoltage < 1.0 || receivedData.npkVoltage > 3.0 ||
+                   receivedData.moistureVoltage < 2.0 || receivedData.moistureVoltage > 4.0 ||
+                   receivedData.lightIntensity < 200.0) {
+            newState = UNHEALTHY;
+        }
+        
+        if (newState !=  currentPlantState) {
+            
+            tft.fillRect(0, 40, 320, 160, TFT_BLACK); // Clear the image
+
+            tft.setTextColor(TFT_WHITE);
+            tft.setTextSize(2);
+
+            if (newState == HEALTHY) {
+                tft.drawString("Plant is Helth", 10, 40);
+                tft.pushImage(10, 40, 100, 100, img_healthy);
+            else if (newState == UNHEALTHY) {
+                tft.setTextColor(TFT_RED);
+                tft.drawString("Plant is Unhelth", 10, 40);
+                tft.pushImage(10, 40, 100, 100, img_unhealthy);
+            }
+
+            currentPlantState = newState;
+        }
+
+        newDataReceived = false;
+    }
+}
