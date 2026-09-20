@@ -22,22 +22,26 @@ The Master Unit receives sensor data, handles system logic, and drives the local
 + <ins>The FACE</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a `7-Pin SPI lcd` (_GND, VCC, CLK, MOSI, RES, DC, CS_)
 + <ins>The HEART</ins>🫀 An  integrated footprint of `TP4056充电源模块板` or `TP4056 charging power module board` for safe USB-C power delivery and Li-ion battery charging, and a `TPS7133Q` (a low dropout voltage regulator) that converts 4.2V to 3.3V for a clean and stable voltage rail for the ESP32-S3 and other sensitive logic pins.
 
-_Master Unit PCB and Schematics_
+_Master Unit PCB and Schematics_\
 <table>
   <tr>
-    <td>
-      <img alt="Schematic" src="Photo/Schematic.jpeg" />
+    <td align="center">
+      <img width="600" alt="Schematic" src="Assets/Schematic.jpeg"><br>
+      Schematic
     </td>
-    <td>
-      <img alt="PCB Trace Routing" src="Photo/PCB Trace Routing.jpeg" />
+    <td align="center">
+      <img width="400" alt="PCB Trace Routing" src="Assets/PCB Trace Routing.jpeg"><br>
+      PCB Trace Routing
     </td>
   </tr>
   <tr>
-    <td>
-     <img width="223" height="365" alt="3D PCB Render (Top view)" src="Photo/3D PCB Render (Top view).jpeg" />
+    <td align="center">
+       <img width="400" alt="3D PCB Render (Top view)" src="Assets/3D PCB Render (Top view).jpeg"><br>
+      3D PCB Render (Top view)
     </td>
-    <td>
-      <img width="223" height="365" alt="3D PCB Render (Bottom view)" src="Photo/3D PCB Render (Bottom view).jpeg" />
+    <td align="center">
+      <img width="400" alt="PCB Trace Routing" src="Assets/PCB Trace Routing.jpeg"><br>
+      3D PCB Render (Bottom view)
     </td>
   </tr>
 </table>
@@ -57,9 +61,21 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 + <ins>Sensor Terminal Blocks</ins> `WAGO 233 Series` tool-less spring-cage terminals (2x08 and 2x04) for wiring of soil sensors (pH, NPK, moisture, light).
 + <ins>User Controls</ins>🫳 `B3U-1000P` tactile push button for manual settings, `LED_SMD_0603` status LED for charging state, `68k,10k,2k,100k,5.1k resistor smd 0603 & 470R resistor smd 0402` and `10uF capacitor smd 0402`for signal conditioning, and power rail decoupling.
 
-## Display Ui 👾
-_Plant in good helth_
-![alt text](<Assets/Plant Gif.gif>)
+## Display & User Interface 👾
+Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.\
+<table>
+  <tr>
+    <td align="center">
+      <img width="400" alt="Angle 1" src="Assets/Display Case 1.png"><br>
+      Front View
+    </td>
+    <td align="center">
+      <img  width="400" alt="Angle 2" src="Assets/Display Case 2.png"><br>
+      Bottom View
+    </td>
+  </tr>
+</table>
 
-_Plant in bad helth_
-![alt text](<Assets/Plant Unhelth.jpeg>)
+Here's a photo of the PCB in the case.\
+<img width="400" alt="3D PCB in case" src="Assets/3D PCB model in the case.png">
+<img width="400" alt="3D PCB model" src="Assets/3D PCB model.png">
