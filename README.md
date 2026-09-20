@@ -18,24 +18,41 @@ A stationary, comprehensive agricultural monitor that measures soil pH, moisture
 Harvest-Overseer uses a modular architecture consisting of a central **Master Unit (Main Brain)** for processing and display, and one or more remote **Sensor Node(s)** designed for low-power battery operation.
 ### Master Unit — The Core 🍎
 The Master Unit receives sensor data, handles system logic, and drives the local OLED status display.
-+ <ins>**The BRAIN**</ins>🧠 `ESP32-S3-WROOM-1-N16R8` to handle calculations, sensor input processing, and screen rendering.
-+ <ins>**The FACE**</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a `7-Pin SPI lcd` (_SDO, LED, SCK, SDI, DC/RS, RESET, CS_)
-+ <ins>**The HEART**</ins>🫀 An  integrated footprint of `TP4056充电源模块板` or `TP4056 charging power module board` for safe USB-C power delivery and Li-ion battery charging, and a `TPS7133Q` (a low dropout voltage regulator) that converts 4.2V to 3.3V for a clean and stable voltage rail for the ESP32-S3 and other sensitive logic pins.
++ <ins>The BRAIN</ins>🧠 `ESP32-S3-WROOM-1-N16R8` to handle calculations, sensor input processing, and screen rendering.
++ <ins>The FACE</ins>🥶 14-pin socket (Conn_01x14_Socket) featuring dedicated connections for a `7-Pin SPI lcd` (_GND, VCC, CLK, MOSI, RES, DC, CS_)
++ <ins>The HEART</ins>🫀 An  integrated footprint of `TP4056充电源模块板` or `TP4056 charging power module board` for safe USB-C power delivery and Li-ion battery charging, and a `TPS7133Q` (a low dropout voltage regulator) that converts 4.2V to 3.3V for a clean and stable voltage rail for the ESP32-S3 and other sensitive logic pins.
 
-![alt text](Photo/02b4703d-b457-4c24-ae5b-602ba67b45ba.jpg)
-![alt text](Photo/fa6662ae-d402-44bb-bacc-2882dc8fa065.jpg)
+_Master Unit PCB and Schematics_
+<table>
+  <tr>
+    <td>
+      <img alt="Schematic" src="Photo/Schematic.jpeg" />
+    </td>
+    <td>
+      <img alt="PCB Trace Routing" src="Photo/PCB Trace Routing.jpeg" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+     <img alt="3D PCB Render (Top view)" src="Photo/3D PCB Render (Top view).jpeg" />
+    </td>
+    <td>
+      <img alt="3D PCB Render (Bottom view)" src="Photo/3D PCB Render (Bottom view).jpeg" />
+    </td>
+  </tr>
+</table>
 
-### Sensor Node — The Limbs or something 🐙
+### Sensor Node — The Backbone 🐙
 The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed to read the pH, moisture, light, and NPK levels, transmitting readings wirelessly back to the Core.
 
 #### Components & Silicon 💎
-+ <ins>**The BRAIN_1**</ins> `ESP32-C3-WROOM-02` (compact RISC-V Wi-Fi/BLE MCU) for reading sensors and beaming data to the Main Brain
-+ <ins>**Power Management Thing**</ins> `MCP73871-2CC`, a LiPo/Li-ion charge manager with automatic power path management, allowing simultaneous solar/USB power supply and battery charging.
-+ <ins>**A Timer**</ins> `TPL5110`, a nano-power system timer that completely cuts off power to the entire node until a scheduled wake interval, drastically reducing standby drain to nano-amps for a long-term outdoor work.
-+ <ins>**Another High-Efficiency Power Management Thing**</ins>, the `DMG3415U` (P-Channel MOSFET) used to physically power down high-draw soil sensors when the node is sleeping.
-+ <ins>**Voltage Regulation (LDO)**</ins> `HT7333` (Low quiescent current 3.3V regulator for logic and sensor rails)
++ <ins>The BRAIN_1</ins> `ESP32-C3-WROOM-02` (compact RISC-V Wi-Fi/BLE MCU) for reading sensors and beaming data to the Main Brain.
++ <ins>Power Management</ins> `MCP73871-2CC`, a LiPo/Li-ion charge manager with automatic power path management, allowing simultaneous solar/USB power supply and battery charging.
++ <ins>A Timer</ins>⏲️ `TPL5110`, a nano-power system timer that completely cuts off power to the entire node until a scheduled wake interval, drastically reducing standby drain to nano-amps for a long-term outdoor work.
++ <ins>Another High-Efficiency Power Management Component</ins>, the `DMG3415U` (P-Channel MOSFET) used to physically power down high-draw soil sensors when the node is sleeping.
++ <ins>Voltage Regulation (LDO)</ins> `HT7333` (Low quiescent current 3.3V regulator for logic and sensor rails).
 
 #### Connectors & Peripherals 🖇️
-+ <ins>**USB-C Interface**</ins> a `USB4085` GCT 16-pin USB-C receptacle for charging.
-+ <ins>**Sensor Terminal Blocks**</ins> `WAGO 233 Series` tool-less spring-cage terminals (2x08 and 2x04) for easy wiring of soil sensors (pH, NPK, moisture, light)
-+ <ins>**Some random button and stuff (unsure of its usage)**</ins> `B3U-1000P` tactile switch, `0603` status LEDs, filtering capacitors, and precision SMD resistor networks.
++ <ins>USB-C Interface</ins>🔋 a `USB4085` GCT 16-pin USB-C receptacle for charging and power delivery.
++ <ins>Sensor Terminal Blocks</ins> `WAGO 233 Series` tool-less spring-cage terminals (2x08 and 2x04) for wiring of soil sensors (pH, NPK, moisture, light).
++ <ins>User Controls</ins>🫳 `B3U-1000P` tactile push button for manual settings, `LED_SMD_0603` status LED for charging state, `68k,10k,2k,100k,5.1k resistor smd 0603 & 470R resistor smd 0402` and `10uF capacitor smd 0402`for signal conditioning, and power rail decoupling.
