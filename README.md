@@ -83,7 +83,7 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 </table>
 
 ## Display & User Interface 👾
-Used `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.
+`DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.
 <table>
   <tr>
     <td align="center">
@@ -111,7 +111,7 @@ _Here's a photo of the Master Unit PCB in the case._
   </tr>
 </table>
 
-_Some display ui_
+_Some display ui (done in the Figma software)_
 <table>
   <tr>
     <td align="center">
@@ -124,3 +124,23 @@ _Some display ui_
     </td>
   </tr>
 </table>
+
+## Components Used
++ ESP32-S3-WROOM-1-N16N*
++ 14-pin socket (Conn_01x14_Socket)
++ TP4056 charging power module board
++ TPS7133Q LDO
++ ESP32-C3-WROOM-02
++ MCP73871-2CC
++ TPL5110
++ DMG3415U
++ HT7333_C2684634
++ USB-C receptacle GCT_USB4085
++ Terminal block WAGO_233-508_2x08
++ Terminal block WAGO_233-508_2x04
++ Button switch SW_SPST_B3U-1000P
++ LED_SMD_0603
++ 10µF capacitor SMD 0402
++ 68k, 10k, 2k, 100k, 5.1k resistor SMD 0603
++ 470R resistor SMD 0402
++ DLS24035B (3.5inch 480*320 SPI TFT LCD Module with ILI9488 Driver)
