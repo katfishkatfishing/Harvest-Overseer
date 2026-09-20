@@ -144,3 +144,5 @@ _Some display ui (done in the Figma software)_
 + 68k, 10k, 2k, 100k, 5.1k resistor SMD 0603
 + 470R resistor SMD 0402
 + DLS24035B (3.5inch 480*320 SPI TFT LCD Module with ILI9488 Driver)
+
+## BOM
