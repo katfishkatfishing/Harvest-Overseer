@@ -57,19 +57,20 @@ void setup() {
 
 void loop() {
 
-    uint32_t rawMv = analogRead(phPin);
+    uint32_t phMv = 0, npkMv = 0, moistureMv = 0, lightMv = 0;
+
     for (int i = 0; i < 16; i++) {
-        rawMv += analogReadMillivolts(phPin);
-        npkMv += analogReadMillivolts(npkPin);
-        moistureMv += analogReadMillivolts(moisturePin);
-        lightMv += analogReadMillivolts(lightPin);
+        phMv += analogReadMilliVolts(phPin);
+        npkMv += analogReadMilliVolts(npkPin);
+        moistureMv += analogReadMilliVolts(moisturePin);
+        lightMv += analogReadMilliVolts(lightPin);
         delay(5);
     }
 
-    float phVoltage = (rawMv / 16.0) / 1000.0;
-    float npkVoltage = (rawNpkMv / 16.0) / 1000.0;
-    float moistureVoltage = (rawMoistureMv / 16.0) / 1000.0;
-    float lightIntensity = (rawLightMv / 16.0) / 1000.0;
+    float phVoltage = (phMv / 16.0) / 1000.0;
+    float npkVoltage = (npkMv / 16.0) / 1000.0;
+    float moistureVoltage = (moistureMv / 16.0) / 1000.0;
+    float lightIntensity = (lightMv / 16.0) / 1000.0;
 
     outgoingData.phVoltage = phVoltage;
     outgoingData.npkVoltage = npkVoltage;
