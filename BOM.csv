@@ -1,0 +1,22 @@
+Item,Parts,Qty.,Unit price(USD),Price per lot(USD),Source
+MCU, ESP32-C3-WROOM-02, 1, 1.80, 1.80, https://www.aliexpress.com/item/1005003181553659.html
+2.54mm Female Header, Conn_01x08_Socket, 2, 0.15, 0.75, https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html
+2.54mm Female Header, Conn_01x04_Socket, 1, 0.10, 0.50, https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html
+2.54mm Female Header, Conn_01x02_Socket, 1, 0.08, 0.40, https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html
+LiPo/Li-ion Battery Management IC, MCP73871-2CC, 1, 2.20, 2.20, https://www.aliexpress.com/item/1005009931582723.html
+Ultra-Low-Power Timer, TPL5110, 1, 3.50, 3.50, https://www.aliexpress.com/item/1005009324980307.html
+P-Channel MOSFET, DMG3415U, 1, 0.09, 8.50, https://www.aliexpress.com/item/1005009968198030.html
+Low-Power LDO, HT7333_C2684634, 1, 0.10, 1.00, https://www.aliexpress.com/item/32697055615.html
+USB-C Receptacle, GCT_USB4085, 1, 0.35, 1.75, https://www.aliexpress.com/w/wholesale-16p-usb-c-receptacle.html
+Terminal block, WAGO_233-508_2x08, 1, 1.20, 1.20, https://www.aliexpress.com/w/wholesale-wago-233.html
+Terminal block, WAGO_233-508_2x04, 1, 0.70, 0.70, https://www.aliexpress.com/w/wholesale-wago-233.html
+Button switch, SW_SPST_B3U-1000P, 2, 0.10, 1.00, https://www.aliexpress.com/w/wholesale-smd-tactile-switch.html
+LED, SMD_0603, 3, 0.01, 0.80, https://www.aliexpress.com/w/wholesale-0603-smd-led.html
+Ceramic Capacitor SMD, 10µF 0402, 3, 0.01, 0.90, https://www.aliexpress.com/w/wholesale-0402-10uf.html
+Ceramic Resistor SMD, 68k 0603, 1, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Ceramic Resistor SMD, 10k 0603, 4, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Ceramic Resistor SMD, 2k 0603, 1, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Ceramic Resistor SMD, 100k 0603, 1, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Ceramic Resistor SMD, 5.1k 0603, 2, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Ceramic Resistor SMD, 470R 0402, 3, 0.01, 0.50, https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html
+Liquid Crystal Display, DLS24035B, 1, 9.20, 9.20, https://www.aliexpress.com/item/1005005287088814.html
