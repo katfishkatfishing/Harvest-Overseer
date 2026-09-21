@@ -81,6 +81,18 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
     </td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td align="center">
+       <img width="400" alt="Sensor Node 3D Model" src="Assets/SensorNode_3DModel1.png"><br>
+      3D Model
+    </td>
+    <td align="center">
+      <img width="400" alt="Sensor Node PCB Render" src="Assets/SensorNode_3DModel2.png"><br>
+      3D Model
+    </td>
+  </tr>
+</table>
 
 ## Display & User Interface 👾
 `DLS24035B` for the display (3.5 Inch 480*320 SPI TFT LCD Module with ILI9488 Driver) with a custom case model.
@@ -126,7 +138,7 @@ _Some display ui (done in the Figma software)_
 </table>
 
 ## Components Used
-+ ESP32-S3-WROOM-1-N16N*
++ ESP32-S3-WROOM-1-N16N
 + 14-pin socket (Conn_01x14_Socket)
 + TP4056 charging power module board
 + TPS7133Q LDO
@@ -146,3 +158,33 @@ _Some display ui (done in the Figma software)_
 + DLS24035B (3.5inch 480*320 SPI TFT LCD Module with ILI9488 Driver)
 
 ## BOM
+| MCU                               | ESP32-C3-WROOM-02                                   | 1   | 1.80  | 1.80  | https://www.aliexpress.com/item/1005003181553659.html                |
+| --------------------------------- | --------------------------------------------------- | --- | ----- | ----- | -------------------------------------------------------------------- |
+| 2.54mm Female Header              | Conn_01x08_Socket                                   | 2   | 0.15  | 0.75  | https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html     |
+| 2.54mm Female Header              | Conn_01x04_Socket                                   | 1   | 0.10  | 0.50  | https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html     |
+| 2.54mm Female Header              | Conn_01x02_Socket                                   | 1   | 0.08  | 0.40  | https://www.aliexpress.com/w/wholesale-2.54mm-female-header.html     |
+| LiPo/Li-ion Battery Management IC | MCP73871-2CC                                        | 1   | 2.20  | 2.20  | https://www.aliexpress.com/item/1005009931582723.html                |
+| Ultra-Low-Power Timer             | TPL5110                                             | 1   | 3.50  | 3.50  | https://www.aliexpress.com/item/1005009324980307.html                |
+| P-Channel MOSFET                  | DMG3415U                                            | 1   | 0.09  | 8.50  | https://www.aliexpress.com/item/1005009968198030.html                |
+| Low-Power LDO                     | HT7333_C2684634                                     | 1   | 0.10  | 1.00  | https://www.aliexpress.com/item/32697055615.html                     |
+| USB-C Receptacle                  | GCT_USB4085                                         | 1   | 0.35  | 1.75  | https://www.aliexpress.com/w/wholesale-16p-usb-c-receptacle.html     |
+| Terminal block                    | WAGO_233-508_2x08                                   | 1   | 1.20  | 1.20  | https://www.aliexpress.com/w/wholesale-wago-233.html                 |
+| Terminal block                    | WAGO_233-508_2x04                                   | 1   | 0.70  | 0.70  | https://www.aliexpress.com/w/wholesale-wago-233.html                 |
+| Button switch                     | SW_SPST_B3U-1000P                                   | 2   | 0.10  | 1.00  | https://www.aliexpress.com/w/wholesale-smd-tactile-switch.html       |
+| LED                               | SMD_0603                                            | 3   | 0.01  | 0.80  | https://www.aliexpress.com/w/wholesale-0603-smd-led.html             |
+| Ceramic Capacitor SMD             | 10µF 0402                                           | 3   | 0.01  | 0.90  | https://www.aliexpress.com/w/wholesale-0402-10uf.html                |
+| Ceramic Resistor SMD              | 68k 0603                                            | 1   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Ceramic Resistor SMD              | 10k 0603                                            | 4   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Ceramic Resistor SMD              | 2k 0603                                             | 1   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Ceramic Resistor SMD              | 100k 0603                                           | 1   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Ceramic Resistor SMD              | 5.1k 0603                                           | 2   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Ceramic Resistor SMD              | 470R 0402                                           | 3   | 0.01  | 0.50  | https://www.aliexpress.com/w/wholesale-smd-resistor-sample-book.html |
+| Liquid Crystal Display            | DLS24035B                                           | 1   | 9.20  | 9.20  | https://www.aliexpress.com/item/1005005287088814.html                |
+| Capacitor SMD                     | 1uF 0603 (C_0402_1005Metric)                        | 1   | 2.27  | 2.27  | https://www.aliexpress.com/item/1005012364450156.html                |
+| 2.54mm Female Header              | Conn_01x14_Socket (PinSocket_1x14_P2.54mm_Vertical) | 1   | 2.89  | 2.89  | https://www.aliexpress.com/item/1005003610333849.html                |
+| Resistor SMD                      | 10k 0603 (R_0603_1608Metric)                        | 3   | 0.45  | 1.36  | https://www.aliexpress.com/item/1005005677654015.html                |
+| Push Button Switch (THT)          | MJTP1243 (SW_PUSH_1P1T_6x3.5mm_H4.3_APEM_MJTP1243)  | 1   | 0.42  | 0.42  | https://www.digikey.com/en/products/detail/apem-inc/MJTP1243/1798039 |
+| Side Tactile Switch (SMD)         | TS-1101-C-W (SW-SMD_TC-1101V-C-B-W)                 | 1   | 0.40  | 0.40  | https://item.szlcsc.com/300030.html                                  |
+| Power Module                      | TP4056 module (PWRM-TH_TP4056)                      | 1   | 1.73  | 1.73  | https://www.aliexpress.com/item/1005005982385924.html                |
+| MCU Module                        | ESP32-S3-WROOM-1-N16R8 (ESP32-S3-WROOM-1_EXP)       | 1   | 4.78  | 4.78  | https://www.aliexpress.com/item/1005005230800143.html                |
+| Voltage Regulator IC              | TPS7133 (SOIC-8_3.9x4.9mm_P1.27mm)                  | 1   | 15.36 | 15.36 | https://www.aliexpress.com/item/1005012324115212.html                |
