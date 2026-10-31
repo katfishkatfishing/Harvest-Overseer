@@ -99,11 +99,11 @@ The Sensor Node is an autonomous, ultra-low-power unit stationed in the soil bed
 <table>
   <tr>
     <td align="center">
-      <img width="400" alt="Angle 1" src="Assets/Display Case 1.png"><br>
+      <img  width="400" alt="Angle 2" src="Assets/DisplayCase 1.png"><br>
       Front View
     </td>
     <td align="center">
-      <img  width="400" alt="Angle 2" src="Assets/Display Case 2.png"><br>
+      <img  width="400" alt="Angle 2" src="Assets/DisplayCase 2.png"><br>
       Bottom View
     </td>
   </tr>
