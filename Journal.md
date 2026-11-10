@@ -22,8 +22,9 @@ Continued on pcb routing. Had to calculate differential pair width for USB data 
 
 ## Lapse 5
 Started on Freecad for the case. Felt so weird having a thick walls for the side and the screen on the screen module wasn't centered. Finished yipeeeeeeeee!
-<img width="130" alt="image" src="https://github.com/user-attachments/assets/67fd4099-3736-4359-8f23-03d25fa773b0" />
-<img width="130" alt="image" src="https://github.com/user-attachments/assets/a0136109-e395-41b1-a9e9-e79c2062770c" />
+
+<img height="300" alt="image" src="https://github.com/user-attachments/assets/67fd4099-3736-4359-8f23-03d25fa773b0" />
+<img height="300" alt="image" src="https://github.com/user-attachments/assets/a0136109-e395-41b1-a9e9-e79c2062770c" />
 
 
 ## Master Node
