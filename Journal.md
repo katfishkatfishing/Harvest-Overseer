@@ -7,15 +7,23 @@ Searching all the components needed and putting them into the schematic editor. 
 
 ## Lapse 2
 Continued on schematic and getting missing components. Also stared at P and N mosfet, forgot how their symbol works. 
+<img width="704" height="403" alt="image" src="https://github.com/user-attachments/assets/7538e318-92ad-40e7-a20c-8a40444aa3a2" />
+
 
 ## Lapse 3
 Assigned all the footprints to all the components and started pcb layout. Had to get more footprints as the library in Kicad doesn't have them.
+<img width="944" height="528" alt="image" src="https://github.com/user-attachments/assets/a137097b-a29a-4042-a1ea-2c71ef5e1866" />
+
 
 ## Lapse 4
-Continued on pcb routing. Had to calculate differential pair width for USB data line. Also realized the connector I chose was a terrible choice.
+Continued on pcb routing. Had to calculate differential pair width for USB data line. Also realized the connector I chose was a terrible choice
+<img width="526" height="398" alt="image" src="https://github.com/user-attachments/assets/42e038be-58ef-45c9-8d87-6223a14128c9" />
+
 
 ## Lapse 5
 Started on Freecad for the case. Felt so weird having a thick walls for the side and the screen on the screen module wasn't centered. Finished yipeeeeeeeee!
+<img width="130" alt="image" src="https://github.com/user-attachments/assets/67fd4099-3736-4359-8f23-03d25fa773b0" />
+<img width="130" alt="image" src="https://github.com/user-attachments/assets/a0136109-e395-41b1-a9e9-e79c2062770c" />
 
 
 ## Master Node
